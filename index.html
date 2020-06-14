@@ -8,17 +8,38 @@
 		<link rel="shortcut icon" type="image/png" href="assets/images/BBFLogoFinalBlack.png">
 		<title>Birch Belle Photography</title>
 		
+		<!-- include animate.css for animations -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+
+		<!-- include all my style sheets -->
 		<link rel="stylesheet" type="text/css" href="assets/css/animations.css">
 		<link rel="stylesheet" type="text/css" href="assets/css/cover.css">
 		<link rel="stylesheet" type="text/css" href="assets/css/home.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/portfolio.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/rates.css">
 
+		<!-- include font awesome for icons -->
 		<script src="https://kit.fontawesome.com/126b31e52e.js" crossorigin="anonymous"></script>
+		<!-- include Vue.js and the official Vue router -->
 		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
 	</head>
 	<body>
-		<main id="app">
-
+		<main id="app" class="span">
+			<navigation v-bind:links="navLinks"></navigation>
+			<div class="content span">
+				<router-view></router-view>
+			</div>
 		</main>
+		
+		<!-- link Vue components -->
+		<script src="assets/js/navigationComponent.js"></script>
+		<script src="assets/js/homeComponent.js"></script>
+		<script src="assets/js/portfolioComponent.js"></script>
+		<script src="assets/js/ratesComponent.js"></script>
+		<script src="assets/js/notFoundComponent.js"></script>
+
+		<!-- link app script with Vue instance -->
+		<script src="assets/js/app.js"></script>
 	</body>
 </html>
