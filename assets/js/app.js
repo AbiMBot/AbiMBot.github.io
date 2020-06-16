@@ -19,7 +19,7 @@ const app = new Vue({
 
 	data: {
 		// links for the header navigation
-		navLinks: [{ name: 'home', icon: 'home', path: '/'}, { name: 'portfolio', icon: 'images', path: '/portfolio'}, { name: 'rates', icon: 'dollar-sign', path: '/rates'}]
+		navLinks: [{ name: 'home', icon: 'home', path: '/', bg: false}, { name: 'portfolio', icon: 'images', path: '/portfolio', bg: true}, { name: 'rates', icon: 'dollar-sign', path: '/rates', bg: true}]
 	},
 
 	methods: {
@@ -27,5 +27,5 @@ const app = new Vue({
 	},
 	computed: {
 		
-	}
+	},
 });

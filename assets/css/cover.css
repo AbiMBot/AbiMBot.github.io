@@ -30,6 +30,41 @@ body
 	background-color: var(--primary-color);
 }
 
+.bg-primary
+{
+	background-color: var(--primary-color);
+}
+.bg-secondary
+{
+	background-color: var(--secondary-color);
+}
+.bg-accent
+{
+	background-color: var(--accent-color);
+}
+
+.color-primary
+{
+	color: var(--primary-color);
+}
+.color-secondary
+{
+	color: var(--secondary-color);
+}
+.color-accent
+{
+	color: var(--accent-color);
+}
+
+.font-header
+{
+	font-family: var(--header-font);
+}
+.font-text
+{
+	font-family: var(--text-font);
+}
+
 .span
 {
 	width: 100%;
@@ -108,7 +143,8 @@ p
 	z-index: 99;
 
 	justify-content: flex-end;
-	background-color: var(--secondary-color);
+
+	transition: background-color 200ms ease;
 }
 .nav-links-wrapper
 {

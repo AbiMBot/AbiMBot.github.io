@@ -20,7 +20,6 @@
 
 .home-overlay
 {
-	background-color: var(--primary-color);
 	opacity: .8;
 
 	align-items: center;
