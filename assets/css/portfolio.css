@@ -1,0 +1,50 @@
+.portfolio-wrapper
+{
+
+}
+.portfolio-collection-wrapper
+{
+	width: 75%;
+	margin-bottom: 2rem;
+}
+.portfolio-collection-wrapper:nth-child(1)
+{
+	margin-top: 3rem;
+}
+
+.portfolio-collection-header
+{
+	margin-bottom: 1rem;
+}
+
+.portfolio-collection-content
+{
+
+}
+
+.portfolio-collection-content > img
+{
+	height: 200px;
+}
+.portfolio-collection-content > img:hover
+{
+	cursor: pointer;
+}
+
+@media(max-width: 1200px)
+{
+	.portfolio-collection-wrapper
+	{
+		width: 100%;
+		align-items: center;
+	}
+	.portfolio-collection-content
+	{
+		justify-content: center;
+	}
+	.portfolio-collection-content > img
+	{
+		height: auto;
+		max-width: 90%;
+	}
+}

@@ -13,10 +13,6 @@ const app = new Vue({
 	el: '#app',
 	router: router,
 
-	components: {
-		'navigation': navigationComponent
-	},
-
 	data: {
 		// links for the header navigation
 		navLinks: [{ name: 'home', icon: 'home', path: '/', bg: false}, { name: 'portfolio', icon: 'images', path: '/portfolio', bg: true}, { name: 'rates', icon: 'dollar-sign', path: '/rates', bg: true}]

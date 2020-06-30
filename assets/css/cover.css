@@ -19,6 +19,7 @@
 	font-size: 16px;
 }
 
+/* general styles */
 *
 {
 	margin: 0;
@@ -100,9 +101,19 @@ body
 	display: flex;
 	flex-direction: column;
 }
+.flex-wrap
+{
+	flex-wrap: wrap;
+}
+
 .flex-space
 {
 	justify-content: space-evenly;
+}
+.flex-center
+{
+	justify-content: center;
+	align-items: center;
 }
 
 .fixed
@@ -136,7 +147,7 @@ p
 	font-family: var(--text-font);
 }
 
-
+/* navigation styles */
 .nav-wrapper
 {
 	position: relative;
@@ -152,7 +163,6 @@ p
 }
 .nav-link
 {
-	color: var(--accent-color);
 	font-size: 1rem;
 
 	padding: 1rem;
@@ -169,6 +179,46 @@ p
 	background-color: var(--primary-color);
 
 	text-shadow: 5px 5px 5px var(--primary-color);
+}
+
+/* footer styles */
+footer
+{
+	font-size: 1.25rem;
+}
+footer i
+{
+	font-size: 2rem;
+	padding: 1rem;
+}
+
+/* photo viewer styles */
+.photo-viewer-wrapper
+{
+	background-color: rgba(0, 0, 0, 0.795);
+	top: 0;
+	left: 0;
+	z-index: 100;
+
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	justify-items: center;
+	align-items: center;
+}
+.photo-viewer-wrapper > i
+{
+	color: white;
+	font-size: 2.5rem;
+	padding: 1rem;
+}
+.photo-viewer-wrapper > i:hover
+{
+	cursor: pointer;
+}
+.photo-viewer-wrapper > img
+{
+	max-width: 90%;
+	max-height: 90vh;
 }
 
 @media(max-width: 1200px)
