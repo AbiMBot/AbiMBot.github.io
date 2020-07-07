@@ -25,10 +25,15 @@
 .portfolio-collection-content > img
 {
 	height: 200px;
+	margin-bottom: 10px;
+
+	transition: transform .5s ease;
 }
 .portfolio-collection-content > img:hover
 {
 	cursor: pointer;
+	z-index: 100;
+	transform: scale(1.2);
 }
 
 @media(max-width: 1200px)
