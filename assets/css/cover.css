@@ -163,6 +163,7 @@ p
 }
 .nav-link
 {
+	position: relative;
 	font-size: 1rem;
 
 	padding: 1rem;
@@ -178,8 +179,20 @@ p
 	color: var(--secondary-color);
 	background-color: var(--primary-color);
 
-	text-shadow: 5px 5px 5px var(--primary-color);
 }
+.nav-link:hover > .nav-children-wrapper
+{
+	display: flex;
+}
+
+.nav-children-wrapper
+{
+	position: absolute;
+	left: 0;
+	top: 100%;
+	display: none;
+}
+
 
 /* footer styles */
 footer

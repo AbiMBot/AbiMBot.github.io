@@ -2,7 +2,7 @@
 const router = new VueRouter({
 	routes: [
 		{ path: '/', component: homeComponent },
-		{ path: '/portfolio', component: portfolioComponent },
+		{ path: '/portfolio/:collection', component: portfolioComponent },
 		{ path: '/rates', component: ratesComponent },
 		// matches any other route and displays the 404 page 
 		{ path: '*', component: notFoundComponent }
@@ -15,13 +15,18 @@ const app = new Vue({
 
 	data: {
 		// links for the header navigation
-		navLinks: [{ name: 'home', icon: 'home', path: '/', bg: false}, { name: 'portfolio', icon: 'images', path: '/portfolio', bg: true}, { name: 'rates', icon: 'dollar-sign', path: '/rates', bg: true}]
+		navLinks: [
+			{ name: 'home', icon: 'home', path: '/', bg: false}, 
+			{ name: 'portfolio', icon: 'images', path: '/portfolio/all', bg: true, children: []}, 
+			{ name: 'rates', icon: 'dollar-sign', path: '/rates', bg: true}
+		]
 	},
 
-	methods: {
-
-	},
-	computed: {
-		
-	},
+	mounted: function() {
+		// get the list of portfolio collections 
+		DataAccess.getPortfolioManifest((manifest) => {
+			var portfolioChildLinks = manifest.map((value) => ({name: value.name, path: `/portfolio/${value.name.toLowerCase()}`}));
+			this.navLinks[1].children = portfolioChildLinks;
+		});
+	}
 });

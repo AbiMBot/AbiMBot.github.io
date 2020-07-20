@@ -2,7 +2,12 @@ Vue.component('navigation', {
 	template: `
 		<div class="nav-wrapper span flex-row" ref="nav">
 			<div class="nav-links-wrapper flex-row animate__animated animate__fadeInDown animate__delay-3s">
-				<router-link v-for="link in links" :key="link.name" v-bind:to="link.path" class="nav-link color-accent"><i v-if="link.icon" v-bind:class="getIconClass(link.icon)"></i> {{link.name}}</router-link>
+				<router-link v-for="link in links" :key="link.name" v-bind:to="link.path" class="nav-link color-accent">
+					<i v-if="link.icon" v-bind:class="'fas fa-' + link.icon"></i> {{link.name}} 
+					<div v-if="link.children" class="nav-children-wrapper flex-column bg-secondary">
+						<router-link v-for="child in link.children" v-bind:to="child.path" class="nav-link color-accent">{{child.name}}</router-link>
+					</div>
+				</router-link>
 			</div>
 		</div>
 	`,
@@ -13,9 +18,6 @@ Vue.component('navigation', {
 		};
 	},
 	methods: {
-		getIconClass: function(iconName) {
-			return `fas fa-${iconName}`;
-		},
 		setBackground: function(fill) {
 			if(!fill)
 			{

@@ -1,0 +1,35 @@
+.pricing-packages
+{
+	width: 60%;
+}
+
+.pricing-card-wrapper
+{
+	width: 300px;
+	height: 400px;
+	margin: 10px;
+
+	border-radius: 8px;
+
+	text-align: center;
+}
+.pricing-card-photos
+{
+	margin-top: 100px;
+	font-size: 1.3rem;
+	font-style: italic;
+}
+.pricing-card-price
+{
+	margin-top: 25px;
+	font-size: 2rem;
+	font-weight: 800;
+}
+
+@media(max-width: 1200px)
+{
+	.pricing-packages
+	{
+		width: 90%;
+	}
+}

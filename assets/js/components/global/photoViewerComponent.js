@@ -1,6 +1,6 @@
 Vue.component('photo-viewer', {
 	template: `
-		<div v-on:click="close()" class="fixed fill-screen photo-viewer-wrapper">
+		<div v-on:click="close()" class="fixed fill-screen photo-viewer-wrapper animate__animated animate__fadeIn">
 			<i v-on:click.stop="leftClick()" class="fas fa-chevron-left"></i>
 			<img v-bind:src="photos[currentPhotoIndex]" alt="" v-on:click.stop/>
 			<i v-on:click.stop="rightClick()" class="fas fa-chevron-right"></i>

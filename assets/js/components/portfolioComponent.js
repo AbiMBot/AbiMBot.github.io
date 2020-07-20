@@ -39,27 +39,28 @@ const portfolioComponent = {
 			// and then open the viewer so that it is visible to the user 
 			this.viewerOpen = true;
 		},
-
-		// get the portfolio photos manifest
-		updateManifest: function() {
-			var request = new XMLHttpRequest();
-			request.open('GET', 'assets/images/portfolio/manifest.json');
-
-			request.onload = () => {
-				if(request.status == 200)
+		updateCollections: function() {
+			// get the collections manifest
+			DataAccess.getPortfolioManifest((data) => {
+				// show all the collections if the 'collection' param is set to 'all'
+				if(this.$route.params.collection == 'all')
 				{
-					var data = JSON.parse(request.responseText);
 					this.collections = data;
 				}
-			};
-			request.send();
+				// else show only one collection depending on the route param
+				else
+				{
+					this.collections = data.filter((value) => value.name.toLowerCase() == this.$route.params.collection);
+				}
+			});
 		}
-	},
-	computed: {
-		
 	},
 
 	mounted: function() {
-		this.updateManifest();
+		this.updateCollections();
+	},
+	beforeRouteUpdate: function(to, from, next) {
+		this.updateCollections();
+		next();
 	}
 }
