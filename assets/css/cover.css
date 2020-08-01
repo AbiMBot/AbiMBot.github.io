@@ -4,6 +4,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
 /* 'Miltonian', cursive */
 @import url('https://fonts.googleapis.com/css2?family=Miltonian&display=swap');
+/* 'Srisakdi', cursive */
+@import url('https://fonts.googleapis.com/css2?family=Srisakdi:wght@700&display=swap');
 
 :root
 {
@@ -13,7 +15,7 @@
 	--accent-color: #181a1c;
 
 	/* setup fonts */
-	--header-font: 'Major Mono Display', monospace;
+	--header-font: 'Srisakdi', cursive;
 	--text-font: 'Miltonian', cursive;
 
 	font-size: 16px;
@@ -73,6 +75,10 @@ body
 .span-screen
 {
 	width: 100vw;
+}
+.span-screen-height
+{
+	height: 100vh;
 }
 
 .fill
@@ -232,6 +238,14 @@ footer i
 {
 	max-width: 90%;
 	max-height: 90vh;
+}
+
+/* 404 styles */
+.not-found-wrapper
+{
+}
+.not-found
+{
 }
 
 @media(max-width: 1200px)
