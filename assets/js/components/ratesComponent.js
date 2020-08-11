@@ -26,7 +26,7 @@ const ratesComponent = {
 				},
 				{
 					name: "Wedding",
-					price: 400,
+					price: 650,
 					bullets: [
 						"$100 security deposit",
 						"150 photographs",
