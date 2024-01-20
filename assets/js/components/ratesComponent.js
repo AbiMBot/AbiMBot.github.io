@@ -15,56 +15,56 @@ const ratesComponent = {
 			packages: [
 				{
 					name: "Engagement Session",
-					price: 110,
+					price: 150,
 					bullets: [
 						"30 photographs",
 						"One hour session",
 						"One location",
 						"One outfit change if desired",
-						"Your choice of digital images on a USB, or an online gallery"
+						"Digital Images on a USB"
 					]
 				},
 				{
 					name: "Wedding",
-					price: 650,
+					price: 1000,
 					bullets: [
 						"$100 security deposit",
 						"150 photographs",
 						"Meeting in advance",
 						"Coverage of the entire day beginning with getting ready",
-						"Your choice of digital images on a USB, or an online gallery"
+						"Digital Images on a USB"
 					]
 				},
 				{
 					name: "Family Session",
-					price: 75,
+					price: 100,
 					bullets: [
 						"15 photographs",
 						"30 minute session",
 						"One location",
-						"Your choice of digital images on a USB, or an online gallery"
+						"Digital Images on a USB"
 					]
 				},
 				{
 					name: "Senior Session",
-					price: 100,
+					price: 125,
 					bullets: [
 						"20 Photographs",
 						"One hour session",
 						"One location",
 						"One outfit change if desired",
-						"Your choice of digital images on a USB, or an online gallery"
+						"Digital Images on a USB"
 					]
 				},
 				{
 					name: "Maternity Session",
-					price: 100,
+					price: 125,
 					bullets: [
 						"20 photographs",
 						"One hour session",
 						"One location",
 						"One outfit change if desired",
-						"Your choice of digital images on a USB, or an online gallery"
+						"Digital Images on a USB"
 					]
 				},
 				{
@@ -75,18 +75,18 @@ const ratesComponent = {
 						"30 minute session",
 						"One location",
 						"One outfit change if desired",
-						"Your choice of digital images on a USB, or an online gallery"
+						"Digital Images on a USB"
 					]
 				},
 				{
 					name: "Newborn/Kids Session",
-					price: 75,
+					price: 100,
 					bullets: [
 						"10 photographs",
 						"45 minute session",
 						"One location",
 						"One outfit change if desired",
-						"Your choice of digital images on a USB, or an online gallery"
+						"Digital Images on a USB"
 					]
 				},
 				{
