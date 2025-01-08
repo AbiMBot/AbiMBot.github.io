@@ -89,13 +89,13 @@ const ratesComponent = {
 						"Digital Images on a USB"
 					]
 				},
-				{
-					name: "Event Coverage",
-					price: 75,
-					bullets: [
-						"Pay by the hour"
-					]
-				}
+				// {
+				// 	name: "Event Coverage",
+				// 	price: 75,
+				// 	bullets: [
+				// 		"Pay by the hour"
+				// 	]
+				// }
 			]
 		};
 	},
